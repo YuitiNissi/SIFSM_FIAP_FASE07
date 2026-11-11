@@ -41,5 +41,5 @@ python -m pytest tests -v
 - `docs/relatorio_tecnico.md`: documentação integrada, hipóteses, resultados e limitações.
 - `docs/circuito_e_arquitetura.md`: explicação complementar da lógica e arquitetura.
 - `docs/graficos/`: gráficos produzidos pela simulação.
-- `link_video.txt`: preencher com o link não listado do YouTube.
+- `link_video.txt`: link do video do Youtube
 
