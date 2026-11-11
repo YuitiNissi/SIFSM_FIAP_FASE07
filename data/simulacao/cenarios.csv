@@ -1,0 +1,7 @@
+cenario,energia_nao_suprida_kwh,sois_com_falta,horas_em_alerta,soc_minimo
+Base (reator 40 kW),23121.85,10,231.75,0.0
+Painéis +20%,18612.006,9,217.25,0.0
+Bateria 2x (12 MWh),17121.85,7,198.25,0.0
+Reator 100 kW,7485.949,7,169.25,0.0
+Reator 100 kW + bateria 2x,1485.949,2,63.5,0.0
+Reator 160 kW,0.0,0,0.0,0.466

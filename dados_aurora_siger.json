@@ -1,0 +1,27 @@
+
+[
+  {
+    "id": 1,
+    "nome": "Módulo Habitacional A",
+    "tipo": "HABITACAO",
+    "consumo_kwh": 35.5,
+    "temperatura_c": 22.0,
+    "status": "ATIVO"
+  },
+  {
+    "id": 2,
+    "nome": "Módulo Agrícola A",
+    "tipo": "AGRICULTURA",
+    "consumo_kwh": 42.0,
+    "temperatura_c": 24.5,
+    "status": "ATIVO"
+  },
+  {
+    "id": 3,
+    "nome": "Módulo Laboratório A",
+    "tipo": "LABORATORIO",
+    "consumo_kwh": 120.0,
+    "temperatura_c": 27.0,
+    "status": "MANUTENCAO"
+  }
+]

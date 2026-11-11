@@ -1,0 +1,212 @@
+{
+  "gerado_em": "2026-11-10T22:05:04",
+  "parametros": {
+    "n_sois": 120,
+    "dt_h": 0.25,
+    "semente": 42,
+    "temp_ext_media_c": -60.0,
+    "temp_ext_amplitude_sazonal_c": 12.0,
+    "temp_ext_amplitude_diaria_c": 35.0,
+    "ruido_temp_sol_c": 3.0,
+    "irradiancia_pico_w_m2": 500.0,
+    "tempestade_inicio_sol": 70,
+    "tempestade_duracao_sois": 10,
+    "opacidade_tempestade": 0.65,
+    "aquecimento_tempestade_c": 5.0,
+    "coef_aquecimento_kw_por_c": 0.35,
+    "fator_manutencao": 0.6,
+    "kw_por_tripulante": 2.5,
+    "tripulantes_min": 6,
+    "tripulantes_max": 14,
+    "dias_por_turno": 5,
+    "ruido_operacional_sol": 0.025,
+    "ruido_consumo_passo": 0.03,
+    "area_paineis_m2": 7000.0,
+    "eficiencia_paineis": 0.22,
+    "reator_kw": 40.0,
+    "bateria_capacidade_kwh": 6000.0,
+    "bateria_soc_inicial": 0.6,
+    "limite_alerta_soc": 0.2
+  },
+  "modulos_simulados": [
+    "Módulo Habitacional A",
+    "Módulo Agrícola A",
+    "Módulo Laboratório A"
+  ],
+  "indicadores": {
+    "sois_simulados": 120,
+    "consumo_total_kwh": 749778.9267455694,
+    "geracao_total_kwh": 802113.9051473816,
+    "consumo_medio_diario_kwh": 6248.157722879745,
+    "potencia_pico_kw": 313.89496811808493,
+    "energia_nao_suprida_kwh": 23121.850253490564,
+    "energia_desperdicada_kwh": 74765.24188825906,
+    "sois_com_falta_energia": 10,
+    "horas_em_alerta": 231.75,
+    "soc_minimo": 0.0,
+    "tempestade_sois": [
+      70,
+      79
+    ],
+    "tempestade_saldo_medio_kwh": -2632.3170565793794
+  },
+  "integracao_numerica": [
+    {
+      "dt_h": 2.055,
+      "exata_kwh": 3022.06589,
+      "trapezio_kwh": 2952.705298,
+      "retangulos_kwh": 2161.530298,
+      "erro_trapezio_pct": 2.295138,
+      "erro_retangulos_pct": 28.475077
+    },
+    {
+      "dt_h": 1.028,
+      "exata_kwh": 3022.06589,
+      "trapezio_kwh": 3004.78538,
+      "retangulos_kwh": 2609.19788,
+      "erro_trapezio_pct": 0.571811,
+      "erro_retangulos_pct": 13.661781
+    },
+    {
+      "dt_h": 0.514,
+      "exata_kwh": 3022.06589,
+      "trapezio_kwh": 3017.749467,
+      "retangulos_kwh": 2819.955717,
+      "erro_trapezio_pct": 0.14283,
+      "erro_retangulos_pct": 6.687815
+    },
+    {
+      "dt_h": 0.247,
+      "exata_kwh": 3022.06589,
+      "trapezio_kwh": 3021.071605,
+      "retangulos_kwh": 2926.130605,
+      "erro_trapezio_pct": 0.032901,
+      "erro_retangulos_pct": 3.174493
+    },
+    {
+      "dt_h": 0.099,
+      "exata_kwh": 3022.06589,
+      "trapezio_kwh": 3021.904237,
+      "retangulos_kwh": 2983.621576,
+      "erro_trapezio_pct": 0.005349,
+      "erro_retangulos_pct": 1.27212
+    }
+  ],
+  "regressao": {
+    "alvo": "consumo_kwh",
+    "variaveis": [
+      "temp_media_c",
+      "tripulantes"
+    ],
+    "intercepto": 4321.3112551703525,
+    "coeficientes": {
+      "temp_media_c": -26.66863037127411,
+      "tripulantes": 35.07199129637027
+    },
+    "erros_padrao": {
+      "intercepto": 70.52211439236635,
+      "temp_media_c": 1.1440088267009851,
+      "tripulantes": 4.162228647635842
+    },
+    "n_observacoes": 96,
+    "coeficientes_teoricos": {
+      "temp_media_c": -25.892999999999997,
+      "tripulantes": 40.0
+    },
+    "faixa_treino": {
+      "temp_media_c": [
+        -77.68701929176757,
+        -43.759482367486804
+      ],
+      "tripulantes": [
+        6.0,
+        14.0
+      ]
+    },
+    "metricas": {
+      "treino": {
+        "r2": 0.8914353749748126,
+        "rmse": 101.78784554748542,
+        "mae": 80.80804326098381,
+        "mape_pct": 1.291136493168267
+      },
+      "teste": {
+        "r2": 0.8087827086344034,
+        "rmse": 103.43126520637375,
+        "mae": 86.68481299332286,
+        "mape_pct": 1.3804593463204373
+      }
+    },
+    "metricas_modelo_simples": {
+      "treino": {
+        "r2": 0.8085506750625138,
+        "rmse": 135.16948946490868,
+        "mae": 106.97426007125989,
+        "mape_pct": 1.7131460948288466
+      },
+      "teste": {
+        "r2": 0.7208265225385346,
+        "rmse": 124.97562988051678,
+        "mae": 101.0360942977173,
+        "mape_pct": 1.6229563038418544
+      }
+    },
+    "equacao": "consumo_kwh = 4321.3 -26.67·temp_media_c +35.07·tripulantes"
+  },
+  "cenarios": [
+    {
+      "cenario": "Base (reator 40 kW)",
+      "energia_nao_suprida_kwh": 23121.85,
+      "sois_com_falta": 10,
+      "horas_em_alerta": 231.75,
+      "soc_minimo": 0.0
+    },
+    {
+      "cenario": "Painéis +20%",
+      "energia_nao_suprida_kwh": 18612.006,
+      "sois_com_falta": 9,
+      "horas_em_alerta": 217.25,
+      "soc_minimo": 0.0
+    },
+    {
+      "cenario": "Bateria 2x (12 MWh)",
+      "energia_nao_suprida_kwh": 17121.85,
+      "sois_com_falta": 7,
+      "horas_em_alerta": 198.25,
+      "soc_minimo": 0.0
+    },
+    {
+      "cenario": "Reator 100 kW",
+      "energia_nao_suprida_kwh": 7485.949,
+      "sois_com_falta": 7,
+      "horas_em_alerta": 169.25,
+      "soc_minimo": 0.0
+    },
+    {
+      "cenario": "Reator 100 kW + bateria 2x",
+      "energia_nao_suprida_kwh": 1485.949,
+      "sois_com_falta": 2,
+      "horas_em_alerta": 63.5,
+      "soc_minimo": 0.0
+    },
+    {
+      "cenario": "Reator 160 kW",
+      "energia_nao_suprida_kwh": 0.0,
+      "sois_com_falta": 0,
+      "horas_em_alerta": 0.0,
+      "soc_minimo": 0.466
+    }
+  ],
+  "recomendacao": "O cenário 'Reator 160 kW' elimina 100% da energia não suprida em relação ao cenário base.",
+  "graficos": [
+    "docs/graficos/01_ciclo_diario.png",
+    "docs/graficos/02_balanco_diario.png",
+    "docs/graficos/03_bateria.png",
+    "docs/graficos/04_integracao_numerica.png",
+    "docs/graficos/05_distribuicoes.png",
+    "docs/graficos/06_correlacao.png",
+    "docs/graficos/07_dispersao_regressao.png",
+    "docs/graficos/08_avaliacao_modelo.png",
+    "docs/graficos/09_cenarios.png"
+  ]
+}

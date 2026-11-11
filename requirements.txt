@@ -1,0 +1,6 @@
+numpy>=1.26,<3
+pandas>=2.0,<4
+matplotlib>=3.7,<4
+oracledb>=2,<4
+python-dotenv>=1,<2
+pytest>=8,<10
