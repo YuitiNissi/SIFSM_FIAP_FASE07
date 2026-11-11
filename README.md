@@ -22,7 +22,7 @@ python -m pip install -r requirements.txt
 python src/main.py
 ```
 
-O menu principal preserva as opções e a apresentação do menu original da equipe: 1 cadastrar, 2 consultar, 3 alterar, 4 excluir, 5 excluir todos, 6 sair. A opção 5 exige confirmação explícita e deve ser evitada na demonstração. As opções 7 a 10 oferecem simulação, previsão e alertas. O código original está preservado sem alterações em `historico_codigo_original/database_original.py.txt`. O menu de simulação pode ser usado sem Oracle; apenas o CRUD depende de conexão.
+O menu principal: 1 cadastrar, 2 consultar, 3 alterar, 4 excluir, 5 excluir todos, 6 sair. A opção 5 exige confirmação explícita e deve ser evitada na demonstração. As opções 7 a 10 oferecem simulação, previsão e alertas. O menu de simulação pode ser usado sem Oracle; apenas o CRUD depende de conexão.
 
 Também é possível executar a análise separadamente:
 
@@ -43,13 +43,3 @@ python -m pytest tests -v
 - `docs/graficos/`: gráficos produzidos pela simulação.
 - `link_video.txt`: preencher com o link não listado do YouTube.
 
-## Limites importantes
-
-- Os resultados são **sintéticos**. O CRUD gerencia a tabela Oracle; a simulação lê dados do JSON local e **não recalcula automaticamente com mudanças no Oracle**.
-- A IA multiagente e o uso de GPU/NPU/TPU são **propostas conceituais**, não funcionalidades executadas.
-- A conexão Oracle precisa ser testada com as credenciais da equipe; os testes automatizados não acessam a conta real.
-- Não inclua `.env`, senhas ou tokens no ZIP ou no vídeo.
-
-## Preservação do trabalho original
-
-Os arquivos de `data/` (incluindo os CSVs e JSONs da simulação) foram restaurados diretamente do ZIP original, sem substituir os valores ou os resultados produzidos pela equipe. O menu original está reproduzido em `src/main.py`, com funções de banco corrigidas, e o código anterior foi guardado integralmente em `historico_codigo_original/`. A opção 5 é destrutiva e exige confirmação.
